@@ -87,13 +87,12 @@ pip install -r requirements.txt
 
 python app.py
 
-text
+
 
 2. Open your browser and navigate to:
 
 http://127.0.0.1:5000/
 
-text
 
 3. Enter patient details in the form and click **Predict** to see results.
 
@@ -115,7 +114,7 @@ You can also use the `/predict` endpoint to get predictions via JSON:
 "blood_glucose_level": 140
 }
 
-text
+
 - **Response**:
 
 {
@@ -123,7 +122,7 @@ text
 "result": "Diabetic"
 }
 
-text
+
 
 ---
 
@@ -137,20 +136,6 @@ The model is trained using the `model.py` script or `model.ipynb` notebook:
 4. Train a Logistic Regression model with class balancing.
 5. Evaluate performance (accuracy, classification report).
 6. Save the trained model, scaler, and encoders using `pickle`.
-
----
-
-## Screenshots
-
-### Web Interface
-
-![Web Interface](https://via.placeholder.com/800x400.png?text=Web+Interface+Screenshot)
-
-### Data Visualizations
-
-![Data Visualization](https://via.placeholder.com/800x400.png?text=Data+Visualization+Screenshot)
-
----
 
 ## Technologies Used
 
