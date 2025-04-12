@@ -85,3 +85,118 @@ pip install -r requirements.txt
 
 1. Start the Flask server:
 
+python app.py
+
+text
+
+2. Open your browser and navigate to:
+
+http://127.0.0.1:5000/
+
+text
+
+3. Enter patient details in the form and click **Predict** to see results.
+
+### API Usage
+
+You can also use the `/predict` endpoint to get predictions via JSON:
+
+- **Endpoint**: `POST /predict`
+- **Request Body (JSON)**:
+
+{
+"gender": 1,
+"age": 45,
+"hypertension": 0,
+"heart_disease": 0,
+"smoking_history": 2,
+"bmi": 25.5,
+"HbA1c_level": 6.5,
+"blood_glucose_level": 140
+}
+
+text
+- **Response**:
+
+{
+"prediction": 1,
+"result": "Diabetic"
+}
+
+text
+
+---
+
+## Model Training
+
+The model is trained using the `model.py` script or `model.ipynb` notebook:
+
+1. Load the dataset (`diabetes_prediction_dataset.csv`).
+2. Encode categorical features (`gender`, `smoking_history`).
+3. Scale numerical features using `MinMaxScaler`.
+4. Train a Logistic Regression model with class balancing.
+5. Evaluate performance (accuracy, classification report).
+6. Save the trained model, scaler, and encoders using `pickle`.
+
+---
+
+## Screenshots
+
+### Web Interface
+
+![Web Interface](https://via.placeholder.com/800x400.png?text=Web+Interface+Screenshot)
+
+### Data Visualizations
+
+![Data Visualization](https://via.placeholder.com/800x400.png?text=Data+Visualization+Screenshot)
+
+---
+
+## Technologies Used
+
+- **Backend**: Flask, Python
+- **Frontend**: HTML, CSS (with `styles.css`), JavaScript (`scripts.js`)
+- **Machine Learning**: Scikit-learn (Logistic Regression)
+- **Data Visualization**: Matplotlib, Seaborn
+
+---
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork this repository.
+2. Create a new branch:
+
+git checkout -b feature-name
+
+text
+3. Commit your changes:
+
+git commit -m "Add new feature"
+
+text
+4. Push to your branch:
+
+git push origin feature-name
+
+text
+5. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+Special thanks to:
+
+- [Scikit-learn](https://scikit-learn.org/) for machine learning tools.
+- [Flask](https://flask.palletsprojects.com/) for web development.
+- [Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/) for data visualization.
+
+---
